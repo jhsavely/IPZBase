@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-IpzBaseApplication<IPZBase>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.jsavely.IPZBase.IpzBaseApplication",
+            "projectName": "IPZBase",
+            "args": ""
+        }
+    ]
+}
