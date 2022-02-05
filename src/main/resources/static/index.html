@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ProgOrient</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/general.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js">
+  </script>
+  <style>
+  .navbar-brand
+    {
+      font-size: xx-large;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark rounded-3 gap-4 sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/NAU.png" alt="" width="120" height="100">
+    </a>
+  </div>
+<span class="navbar-text mb-0 h1">IPZBase</span>
+  <div class="navbar-brand d-flex justify-content-center container-fluid ">
+    <ul class="navbar-nav gap-4">
+      <li class="nav-item">
+        <a type="button"  class="btn btn-primary btn-lg" href="students.html" role="button">Студентам</a>
+      </li>
+      <li class="nav-item">
+        <a type="button"  class="btn btn-primary btn-lg" href="teachers.html" role="button">Викладачам</a>
+      </li>
+      <li class="nav-item">
+        <a type="button"  class="btn btn-primary btn-lg" href="login_register.html" role="button">Вхід/Реєстрація</a>
+      </li>
+      <li class="nav-item">
+        <a type="button"  class="btn btn-primary btn-lg" href="about.html" role="button">Про автора</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ </div>
+ <div class="container">
+      <h2>Вітаємо!</h2>
+      <h5>На платформі навчального середовища НАУ.</h5>
+      <h5>Для початку роботи пройдіть процесс реєстрації</h5>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <p>Випускники зможуть знайти тут необхыны знання, та перевырити свої схильності.</p>
+      <p>Якщо ви студент перейдіть в розділ студентам </p>
+      <p>Для викладачів, які бажають вдосконалити систему, внести зміни в надані тести, перейдіть в розділ Викладачам</p>
+    </div>
+
+</div>
+<footer class="fixed-bottom mt-auto p-4 bg-dark text-white text-center">
+  <p>Виконав студент групи 501-Бз Савельєв Іван</p>
+  <p id="footer_date"></p>
+    <script>
+      var d = new Date();
+      document.getElementById("footer_date").innerHTML = d;
+    </script>
+</footer>
+</body>
+</html>
