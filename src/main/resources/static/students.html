@@ -10,71 +10,172 @@
   <script src="js/bootstrap.bundle.min.js">
   </script>
   <title>Students</title>
+
+  <style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+  </style>
 </head>
+
 <body>
   <header></header>
   <main>
-    <div class="container p-5 my-5 border">
+    <div class="container p-5 my-5 bg-light border">
       <div class="row">
         <div class="col">
-          <h1>Платформа для навчального середовища</h1>
-          <p>Пропонує студенту за допомогою каталогу тем та напрямків дисциплін зорієнтуватись в напрямку IT.</p>
+          <h1>Платформа для навчального середовища</h1>          
+          <p>Пропонує студенту за допомогою каталогу тем та напрямків дисциплін зорієнтуватись в напрямку IT.</p>         
+        </div>
+        <div class="col-md-auto">
           <img src="img/NAU.png" alt="" width="120" height="100">
         </div>
+       
       </div>
     </div>
     <div class="container">
-      <h2>Дисципліни представлені на кафедрі</h2>
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-4 md-5"><div class="p-3 border bg-light">Комп’ютерна дискретна математика</div></div>
-          <div class="col-md-3 col-sm-4 md-5"><div class="p-3 border bg-light">Алгоритми та структури даних</div></div>
-          <div class="col-md-3 col-sm-4 md-5"><div class="p-3 border bg-light">Основи програмування</div></div>
+          <div class="col-12">
+            <h2 class="text-center text-uppercase mb-5">Дисципліни представлені на кафедрі</h2>
+          </div>
         </div>
         <div class="row">
-          <div class="col md-5"><div class="p-3 border bg-light">Об’єктна орієнтоване програмування</div></div>
-          <div class="col md-5"><div class="p-3 border bg-light">Майстерня розробки програмного забезпечення</div></div>
-          <div class="col md-5"><div class="p-3 border bg-light">Операційні системи;</div></div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Комп’ютерна дискретна математика</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Алгоритми та структури даних</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Основи програмування</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Об’єктно орієнтоване програмування</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Майстерня розробки програмного забезпечення</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Операційні системи</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Бази даних</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3"> Архітектура комп’ютера</h5>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="dscipline-squares border-info">
+              <h5 class="text-center p-2 bg-light border rounded-3">Вбудовані системи</h5>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="col md-5"><div class="p-3 border bg-light">Бази даних</div></div>
-          <div class="col md-5"><div class="p-3 border bg-light">Архітектура комп’ютера</div></div>
-          <div class="col md-5"><div class="p-3 border bg-light">Вбудовані системи реального часу</div></div>
-        </div>   
       </div>
+      <div class="container">
+        <h2>Дисципліни</h2>
+      <p>Для більшої зручності є навігація по дереву тем.</p>
+        <ul id="myUL">
+        <li><span class="caret">Архітектура комп'ютера</span>
+          <ul class="nested">
+            <li>Архітектура системи команд </li>
+            <li>Мікроархітектура</li>
+            <li><span class="caret">Системне проектування</span>
+              <ul class="nested">
+                <li>Прямий доступ до пам'яті (DMA)</li>
+                <li>Віртуалізація</li>
+                <li><span class="caret">Архітектура системи команд</span>
+                  <ul class="nested">
+                    <li>Асемблер</li>
+                    <li>Мови високого рівня</li>
+                    <li>Компілятори</li>
+                    <li>Операційний код</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>  
+          </ul>
+        </li>
+      </ul>
+      </div>
+      <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        
+        for (i = 0; i < toggler.length; i++) {
+          toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+          });
+        }
+        </script>
       <div class="container p-3 my-3 ">
         <div class="row ">
           <div class="col-xs-1" align="center">
             <h1>Для з'ясування власних схильностей пропонується пройти тестування</h1>
-            <p>Щоб виявити схильності та сильні сторони студенту пропонється три етапи тестування.</p>
-            <button type="button" class="btn btn-primary btn-lg ">Пройти тестування</button>
+            <p>Щоб виявити схильності та сильні сторони студенту пропонється тестування.</p>
+            <a href="big_five.html" type="button" class="btn btn-primary btn-lg " >Пройти тест</a>
+            <a href="tech_path.html" type="button" class="btn btn-primary btn-lg " >Технічний шлях</a>
           </div>
         </div>
       </div>
-  </div>
-  <div class="container">
-<br>
-<br>
-<br>
-<br>
-    <div class="row">
-      <div class="col">
-        <button type="button" class="btn btn-primary btn-lg ">Тест Клімова</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-primary btn-lg ">Тест Голланда</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-primary btn-lg ">Тест Великої П'ятірки</button>
-      </div>
     </div>
-<br>
-<br>
-<br>
-<br>
-  </div>
+    <div class="container">
+      <br>
+      <br>
+    </div>
   </main>
   <footer></footer>
 </body>
-
 </html>

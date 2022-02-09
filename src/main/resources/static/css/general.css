@@ -1,8 +1,12 @@
 body {
-    background-color: #b3d1ff;
+    background-color: white;
   }
 
   .carousel-inner > .item > img {
+    width:640px;
+    height:100px;
+  }
+  #index_carousel{
     width:640px;
     height:100px;
   }

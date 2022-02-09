@@ -79,18 +79,18 @@
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
+        <td>Іван</td>
+        <td>Мельник</td>
         <td>john@example.com</td>
       </tr>
       <tr>
-        <td>Mary</td>
-        <td>Moe</td>
+        <td>Марія</td>
+        <td>Шевченко</td>
         <td>mary@example.com</td>
       </tr>
       <tr>
-        <td>July</td>
-        <td>Dooley</td>
+        <td>Юлія</td>
+        <td>Коваленко</td>
         <td>july@example.com</td>
       </tr>
     </tbody>
@@ -98,13 +98,31 @@
 </div>
 <div class="container p-3 my-3 ">
   <div class="row ">
-    <div class="col-xs-1" align="center">
+    <div class="col-md-12 text-center" >
       <h2>Додати новий тест</h2>
       <button type="button" class="btn btn-primary btn-lg ">Додати тест</button>
     </div>
   </div>
 </div>
-<textarea class="textarea container p-4 my-3 "></textarea>
+<div class="container p-3 my-3 ">
+  <div class="row ">
+    <div class="col-md-12 text-center" >
+      <h2>Створити нову статтю</h2>
+      <div class="mb-3">
+        <input class="form-control" type="text" placeholder="Розділ статті" aria-label="default input example">
+      </div>
+      <div class="mb-3">
+        <input class="form-control" type="text" placeholder="Тема статті" aria-label="default input example">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Текст статті</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg ">Створити</button>
+    </div>
+  </div>
+</div>
+
 
     </main>
     <footer></footer>
