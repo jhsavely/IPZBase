@@ -1,4 +1,4 @@
-package com.library;
+package com.jsavely.IPZBase;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

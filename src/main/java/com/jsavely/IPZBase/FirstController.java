@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class FirstController{
 
-    @GetMapping("/home")
+    @GetMapping("/firstMsg")
 	public String getMsg(
         @RequestParam(name = "name", required = false, defaultValue = " ello") 
         String msg,
