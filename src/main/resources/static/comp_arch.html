@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js">
+    </script>
+    <title>Comp Arch</title>
+
+<style>
+    ul, #myUL {
+      list-style-type: none;
+    }
+    
+    #myUL {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none; /* Safari 3.1+ */
+      -moz-user-select: none; /* Firefox 2+ */
+      -ms-user-select: none; /* IE 10+ */
+      user-select: none;
+    }
+    
+    .caret::before {
+      content: "\25B6";
+      color: black;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    
+    .caret-down::before {
+      -ms-transform: rotate(90deg); /* IE 9 */
+      -webkit-transform: rotate(90deg); /* Safari */
+      transform: rotate(90deg);  
+    }
+    
+    .nested {
+      display: none;
+    }
+    
+    .active {
+      display: block;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="container p-5 my-5 bg-light border">
+        <div class="row">
+          <div class="col">
+            <h1>Навігація по темі: Дискретна математика</h1>          
+            <p>Деревовидна структура полегшує сприйняття розділів та підрозділів.</p>         
+          </div>
+          <div class="col-md-auto">
+            <img src="img/microchip-800x500_c.jpg" alt="" width="120" height="100">
+          </div>
+         
+        </div>
+      </div>
+    <div class="d-flex justify-content-center">
+        <ul id="myUL">
+        <li><span class="caret">Архітектура комп'ютера</span>
+          <ul class="nested">
+            <li>Архітектура системи команд </li>
+            <li>Мікроархітектура</li>
+            <li><span class="caret">Системне проектування</span>
+              <ul class="nested">
+                <li>Прямий доступ до пам'яті (DMA)</li>
+                <li>Віртуалізація</li>
+                <li><span class="caret">Архітектура системи команд</span>
+                  <ul class="nested">
+                    <li>Асемблер</li>
+                    <li>Мови високого рівня</li>
+                    <li>Компілятори</li>
+                    <li>Операційний код</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>  
+          </ul>
+        </li>
+      </ul>
+      </div>
+      <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        
+        for (i = 0; i < toggler.length; i++) {
+          toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+          });
+        }
+        </script>
+</body>
+</html>

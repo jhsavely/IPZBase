@@ -10,48 +10,7 @@
   <script src="js/bootstrap.bundle.min.js">
   </script>
   <title>Students</title>
-
-  <style>
-ul, #myUL {
-  list-style-type: none;
-}
-
-#myUL {
-  margin: 0;
-  padding: 0;
-}
-
-.caret {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-}
-
-.caret::before {
-  content: "\25B6";
-  color: black;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.caret-down::before {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */
-  transform: rotate(90deg);  
-}
-
-.nested {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
-  </style>
-</head>
+ </head>
 
 <body>
   <header></header>
@@ -77,7 +36,7 @@ ul, #myUL {
         </div>
         <div class="row">
           <div class="col-xl-4 col-md-6 col-sm-12">
-            <div onclick="location.href='index.html';" style="cursor: pointer;" class="dscipline-squares border-info ">
+            <div onclick="location.href='comp_descrete_math.html';" class="dscipline-squares border-info ">
               <h5 class="text-center p-2 bg-light border rounded-3">Комп’ютерна дискретна математика</h5>
               
             </div>
@@ -113,7 +72,7 @@ ul, #myUL {
             </div>
           </div>
           <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="dscipline-squares border-info">
+            <div onclick="location.href='comp_arch.html';" class="dscipline-squares border-info">
               <h5 class="text-center p-2 bg-light border rounded-3"> Архітектура комп’ютера</h5>
             </div>
           </div>
@@ -124,50 +83,15 @@ ul, #myUL {
           </div>
         </div>
       </div>
-      <div class="container">
-        <h2>Дисципліни</h2>
-      <p>Для більшої зручності є навігація по дереву тем.</p>
-        <ul id="myUL">
-        <li><span class="caret">Архітектура комп'ютера</span>
-          <ul class="nested">
-            <li>Архітектура системи команд </li>
-            <li>Мікроархітектура</li>
-            <li><span class="caret">Системне проектування</span>
-              <ul class="nested">
-                <li>Прямий доступ до пам'яті (DMA)</li>
-                <li>Віртуалізація</li>
-                <li><span class="caret">Архітектура системи команд</span>
-                  <ul class="nested">
-                    <li>Асемблер</li>
-                    <li>Мови високого рівня</li>
-                    <li>Компілятори</li>
-                    <li>Операційний код</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>  
-          </ul>
-        </li>
-      </ul>
-      </div>
-      <script>
-        var toggler = document.getElementsByClassName("caret");
-        var i;
-        
-        for (i = 0; i < toggler.length; i++) {
-          toggler[i].addEventListener("click", function() {
-            this.parentElement.querySelector(".nested").classList.toggle("active");
-            this.classList.toggle("caret-down");
-          });
-        }
-        </script>
+
       <div class="container p-3 my-3 ">
         <div class="row ">
-          <div class="col-xs-1" align="center">
-            <h1>Для з'ясування власних схильностей пропонується пройти тестування</h1>
-            <p>Щоб виявити схильності та сильні сторони студенту пропонється тестування.</p>
+          <div class="col-xs-1 " align="center">
+            <h2>Для з'ясування власних схильностей пропонується пройти тестування</h2>
+            <p>А також ознайомитися із наявними статтями або перйти до обраного.</p>
             <a href="big_five.html" type="button" class="btn btn-primary btn-lg " >Пройти тест</a>
-            <a href="tech_path.html" type="button" class="btn btn-primary btn-lg " >Технічний шлях</a>
+            <a href="all_articles.html" type="button" class="btn btn-primary btn-lg " >Всі статті</a>
+            <a href="cabinet.html" type="button" class="btn btn-primary btn-lg " >Обране</a>
           </div>
         </div>
       </div>

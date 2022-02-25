@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
+
+    <title>Test Results</title>
+</head>
+<body>
+    <div class="container p-3 my-5 bg-light border">
+        <div class="row">
+          <div class="col">
+            <h1>Результати тесту</h1>          
+            <p>Ваш результат</p>         
+          </div>
+          <div class="col-md-auto">
+            <img src="img/Big_Five_1.png" alt="" width="200" height="200">
+          </div>
+         
+        </div>
+      </div>
+<div class="container d-flex justify-content-center">
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<script>
+var xValues = ["Opennes", "Conscientiousness", "Extraversion ", "Agreeableness ", "Neuroticism"];
+var yValues = [90, 49, 44, 15, 25];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                display: true,
+                labelString: 'Traits'
+                }
+                        }],
+                    yAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 100
+                            }
+                        }]
+    },
+    title: {
+      display: true,
+      text: "Big five test"
+    }
+  }
+});
+</script>
+<div class="container p-3 my-3 ">
+    <div class="row ">
+      <div class="col-xs-1 " align="center">
+        <h1>Рекомендації для вас</h1>
+        <p>Згідно тесту ваших  схильностей та сильних сторін вам пропонуються направлення.</p>
+        <a href="path_backend.html" type="button" class="btn btn-primary btn-lg " >Бекенд</a>
+        <a href="path_devops.html" type="button" class="btn btn-primary btn-lg " >Девопс</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
